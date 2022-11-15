@@ -5,7 +5,7 @@ const { width, height } = Dimensions.get('screen')
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#202024',
+    backgroundColor: '#3E3AA6',
   },
   centerScreen: {
     flex: 1,
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   input: {
     width: width - 32,
     height: 56,
-    backgroundColor: '#121214',
+    backgroundColor: '#3A55A6',
     borderRadius: 6,
     marginVertical: 8,
     paddingHorizontal: 16,
@@ -36,9 +36,12 @@ const styles = StyleSheet.create({
   },
   logo: {
     marginVertical: 16,
+    width: 80,
+    height: 80,
+    borderRadius: 15
   },
   button: {
-    backgroundColor: '#00875F',
+    backgroundColor: '#318BA5',
     height: 56,
     width: width - 32,
     justifyContent: 'center',

@@ -1,5 +1,5 @@
 import { Image } from 'react-native'
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.jpg'
 import styles from '../styles'
 
 function ImgLogo() {

@@ -4,6 +4,8 @@ import { Button, Text } from 'react-native'
 import { Container } from '../components'
 import useAuth from '../hooks/auth'
 import { Card, TextInput } from 'react-native-paper'
+import {style} from 'react-native'
+import { width } from '../styles'
 
 function Home() {
   const [endereco, setEndereco] = useState({})
@@ -27,26 +29,25 @@ function Home() {
         <Card.Title title='Informe o CEP' subtitle='Busque o endereço pelo CEP' />
         <Card.Content>
           <TextInput
-            placeholder='60000000'
+            placeholder='60000-000'
             label='CEP'
             onChangeText={function (text) {
               setCEP(text)
             }}
           />
+          <Card style={{ marginTop: 32 }}>
+            <Card.Content>
+              <Text>{endereco.address}</Text>
+              <Text>{endereco.city} - {endereco.state} - {endereco.district}</Text>
+            </Card.Content>
+          </Card>
         </Card.Content>
-        <Card.Actions>
-          <Button mode='contained' onPress={buscaCEP} title="pesquisar"/>
+        <Card.Actions style={{ justifyContent: 'flex-end', marginTop: 10, marginRight: 10, marginBottom: 265}}>
+          <Button mode='contained' onPress={buscaCEP} title="pesquisar" style={{backgroundColor: '#318BA5'}}/>
         </Card.Actions>
       </Card>
-
-      <Card style={{ marginTop: 32 }}>
-        <Card.Content>
-          <Text>{endereco.address}</Text>
-          <Text>{endereco.city} - {endereco.state} - {endereco.district}</Text>
-        </Card.Content>
-      </Card>
       
-      <Button title='Sair' onPress={doLogout} />
+      <Button backgroundColor='#318BA5' title='Sair' onPress={doLogout} />
       
     </Container>
   )
